@@ -20,6 +20,6 @@ class User {
     }
 }
 
-class PremiumUser extends Product{
+class PremiumUser extends User{
     protected $discount = 49;
 }

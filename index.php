@@ -11,9 +11,19 @@ BONUS: Gestite eventuali eccezioni che si possono verificare (es: carta di credi
 ---------------------------------------------------------------------------
 */
 
+// importo i file
 require_once('eshop.php');
 require_once('product.php');
 require_once('user.php');
 
-$Emezzon = new EShop();
-var_dump($Avazon);
+//  Creo l'e-shop
+$Emezzon = new EShop('amazon', 'Via degli Alberi,1');
+var_dump($Emezzon);
+
+// Creo i prodotti
+
+// Aggiungo i prodotti all'eshop
+
+// Creo l'utente
+
+// Creo l'utente premium
