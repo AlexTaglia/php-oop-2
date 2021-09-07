@@ -11,19 +11,37 @@ BONUS: Gestite eventuali eccezioni che si possono verificare (es: carta di credi
 ---------------------------------------------------------------------------
 */
 
+//------------------------------------
 // importo i file
 require_once('eshop.php');
 require_once('product.php');
 require_once('user.php');
 
+//------------------------------------
 //  Creo l'e-shop
+echo "<hr>";
+echo "E-SHOP";
 $Emezzon = new EShop('amazon', 'Via degli Alberi,1');
 var_dump($Emezzon);
 
+//------------------------------------
 // Creo i prodotti
+echo "<hr>";
+echo "Prodotti";
 
+$iphone = new TechProduct('iphone', 'smartphone', 999);
+$table = new HomeProduct('table', 'wooden table', 100);
+$chair = new HomeProduct('chair', 'steel chair', 50);
+
+var_dump($iphone);
+var_dump($table);
+var_dump($chair);
+
+//------------------------------------
 // Aggiungo i prodotti all'eshop
 
+//------------------------------------
 // Creo l'utente
 
+//------------------------------------
 // Creo l'utente premium
