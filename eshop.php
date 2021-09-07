@@ -26,4 +26,8 @@ class EShop {
     public function addPorduct(Product $productaName) {
         $this->products[] = $productaName;
     }
+
+    public function addUsers(User $user) {
+        $this->users[] = $user;
+    }
 }

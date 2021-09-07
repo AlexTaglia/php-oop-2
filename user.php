@@ -7,6 +7,12 @@ class User {
     protected  $password;
     // protected  $cart = [];
 
+    public function __construct(string $name, string $surname, string $email, string $password ){
+        $this->name = $name;
+        $this->surname = $surname;   
+        $this->email = $email;   
+        $this->password = $password;   
+    }
 
     public function getName() {
         return $this->name;

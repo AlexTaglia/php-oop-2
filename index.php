@@ -49,6 +49,25 @@ var_dump($Emezzon->getProducts());
 
 //------------------------------------
 // Creo l'utente
+echo "<br/><hr>";
+echo "Utente creato";
+$user1 = new User('Pinco', 'Palla', 'pinco@palla.com', '1234');
+
+var_dump($user1);
 
 //------------------------------------
 // Creo l'utente premium
+echo "<br/><hr>";
+echo "Utente Premium";
+$userPremium1 = new PremiumUser('Mario', 'Rossi', 'Mario@rossi.com', '0000');
+
+var_dump($userPremium1);
+
+//------------------------------------
+// Aggiungo gli utenti all'eshop
+echo "<br/><hr>";
+echo "Utenti aggiunti all'eshop";
+$Emezzon->addUsers($user1);
+$Emezzon->addUsers($userPremium1);
+
+var_dump($Emezzon->getUsers());
