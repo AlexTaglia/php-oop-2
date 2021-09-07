@@ -5,13 +5,19 @@ class User {
     protected  $surname;
     protected  $email;
     protected  $password;
-    // protected  $cart = [];
+    protected  $creditCard = [
+        "number" => "",
+        "expireDate" => "",
+    ];
 
-    public function __construct(string $name, string $surname, string $email, string $password ){
+    protected  $cart = [];
+    public function __construct(string $name, string $surname, string $email, string $password,float $creditCardNumber,string $expireDate ){
         $this->name = $name;
         $this->surname = $surname;   
         $this->email = $email;   
-        $this->password = $password;   
+        $this->password = $password; 
+        $this->creditCard['number'] = $creditCardNumber;
+        $this->creditCard['expireDate'] = $expireDate;  
     }
 
     public function getName() {

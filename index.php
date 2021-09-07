@@ -51,7 +51,7 @@ var_dump($Emezzon->getProducts());
 // Creo l'utente
 echo "<br/><hr>";
 echo "Utente creato";
-$user1 = new User('Pinco', 'Palla', 'pinco@palla.com', '1234');
+$user1 = new User('Pinco', 'Palla', 'pinco@palla.com', '1234', "5151548454804848", "31/12/2020");
 
 var_dump($user1);
 
@@ -59,7 +59,7 @@ var_dump($user1);
 // Creo l'utente premium
 echo "<br/><hr>";
 echo "Utente Premium";
-$userPremium1 = new PremiumUser('Mario', 'Rossi', 'Mario@rossi.com', '0000');
+$userPremium1 = new PremiumUser('Mario', 'Rossi', 'Mario@rossi.com', '0000', "5152548554804884", "31/12/2021");
 
 var_dump($userPremium1);
 
@@ -71,3 +71,8 @@ $Emezzon->addUsers($user1);
 $Emezzon->addUsers($userPremium1);
 
 var_dump($Emezzon->getUsers());
+
+//------------------------------------
+// Aggiungo la cartsa di credito all'utente
+// echo "<br/><hr>";
+// echo "Utenti con carta di credito";
