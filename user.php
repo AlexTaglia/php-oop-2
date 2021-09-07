@@ -5,6 +5,8 @@ class User {
     protected  $surname;
     protected  $email;
     protected  $password;
+    // protected  $cart = [];
+
 
     public function getName() {
         return $this->name;

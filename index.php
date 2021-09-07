@@ -26,8 +26,8 @@ var_dump($Emezzon);
 
 //------------------------------------
 // Creo i prodotti
-echo "<hr>";
-echo "Prodotti";
+echo "<br/><hr>";
+echo "Creazione prodotti";
 
 $iphone = new TechProduct('iphone', 'smartphone', 999);
 $table = new HomeProduct('table', 'wooden table', 100);
@@ -39,6 +39,13 @@ var_dump($chair);
 
 //------------------------------------
 // Aggiungo i prodotti all'eshop
+echo "<br/><hr>";
+echo "Prodotti aggiunti nell'eshop";
+$Emezzon->addPorduct($iphone);
+$Emezzon->addPorduct($table);
+$Emezzon->addPorduct($chair);
+
+var_dump($Emezzon->getProducts());
 
 //------------------------------------
 // Creo l'utente

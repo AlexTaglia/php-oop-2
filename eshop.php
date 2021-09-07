@@ -5,7 +5,6 @@ class EShop {
     public $address;
     protected $users = [];
     protected $products = [];    
-    protected $cart = [];
 
     public function __construct(string $name, string $address){
         $this->name = $name;
@@ -22,5 +21,9 @@ class EShop {
 
     public function getCart() {
         return $this->cart;
+    }
+
+    public function addPorduct(Product $productaName) {
+        $this->products[] = $productaName;
     }
 }
