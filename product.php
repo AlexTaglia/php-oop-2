@@ -16,6 +16,7 @@ class TechProduct extends Product{
         $this->price = $price;
         $this->category = 'Tech Product';
     }
+
 }
 
 class HomeProduct extends Product{

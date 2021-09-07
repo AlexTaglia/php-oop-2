@@ -73,6 +73,11 @@ $Emezzon->addUsers($userPremium1);
 var_dump($Emezzon->getUsers());
 
 //------------------------------------
-// Aggiungo la cartsa di credito all'utente
-// echo "<br/><hr>";
-// echo "Utenti con carta di credito";
+// Aggiungo il prodotto al carrello dell'utente e sommo il totale
+echo "<br/><hr>";
+echo "Aggiungo il prodotto al carrello dell'utente e calcolo la somma";
+$user1->addPorduct($iphone);
+$user1->addPorduct($table);
+$user1->totalToPay();
+
+var_dump($user1);

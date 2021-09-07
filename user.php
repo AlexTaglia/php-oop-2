@@ -11,6 +11,8 @@ class User {
     ];
 
     protected  $cart = [];
+    protected  $cartTotal = 0;
+
     public function __construct(string $name, string $surname, string $email, string $password,float $creditCardNumber,string $expireDate ){
         $this->name = $name;
         $this->surname = $surname;   
@@ -31,6 +33,16 @@ class User {
     }
     public function getPassword() {
         return $this->password;
+    }
+
+    public function addPorduct(Product $productaName) {
+        $this->cart[] = $productaName;
+    }
+   
+    public function totalToPay(){
+        foreach($this->cart as $item)
+            $this->cartTotal += $item->price;
+        return $cartTotal;
     }
 }
 
