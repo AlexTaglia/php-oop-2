@@ -78,16 +78,22 @@ echo "<br/><hr>";
 echo "Aggiungo il prodotto al carrello dell'utente e calcolo la somma";
 $user1->addPorduct($iphone);
 $user1->addPorduct($table);
-$user1->totalToPay();
+// $user1->totalToPay();
 
 var_dump($user1);
+echo "<br/>";
+$total = $user1->totalToPay();
+echo "Totale da pagare: $total";
 
 //------------------------------------
 // Aggiungo il prodotto al carrello dell'utente Premium e sommo il totale includendo lo sconto
 echo "<br/><hr>";
 echo "Aggiungo il prodotto al carrello dell'utente e calcolo la somma con lo sconto";
 $userPremium1->addPorduct($iphone);
-$userPremium1->addPorduct($chair);
-$userPremium1->totalToPay();
+$userPremium1->addPorduct($table);
+// $userPremium1->totalToPaydiscount();
 
 var_dump($userPremium1);
+echo "<br/>";
+$total = $userPremium1->totalToPay();
+echo "Totale da pagare con sconto: $total";

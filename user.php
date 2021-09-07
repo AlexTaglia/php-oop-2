@@ -56,4 +56,12 @@ class User {
 
 class PremiumUser extends User{
     protected $discount = 50;
+
+    public function totalToPaydiscount(){
+        foreach($this->cart as $item)
+            $this->cartTotal += $item->price;
+        return $this->cartTotal - (($this->cartTotal /100)*$this->discount);
+
+    }
+
 }
