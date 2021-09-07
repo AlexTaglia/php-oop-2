@@ -81,3 +81,13 @@ $user1->addPorduct($table);
 $user1->totalToPay();
 
 var_dump($user1);
+
+//------------------------------------
+// Aggiungo il prodotto al carrello dell'utente Premium e sommo il totale includendo lo sconto
+echo "<br/><hr>";
+echo "Aggiungo il prodotto al carrello dell'utente e calcolo la somma con lo sconto";
+$userPremium1->addPorduct($iphone);
+$userPremium1->addPorduct($chair);
+$userPremium1->totalToPay();
+
+var_dump($userPremium1);

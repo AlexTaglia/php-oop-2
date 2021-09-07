@@ -5,13 +5,14 @@ class User {
     protected  $surname;
     protected  $email;
     protected  $password;
+    protected  $discount = 0;
     protected  $creditCard = [
         "number" => "",
         "expireDate" => "",
     ];
 
     protected  $cart = [];
-    protected  $cartTotal = 0;
+    protected  $cartTotal;
 
     public function __construct(string $name, string $surname, string $email, string $password,float $creditCardNumber,string $expireDate ){
         $this->name = $name;
@@ -38,14 +39,21 @@ class User {
     public function addPorduct(Product $productaName) {
         $this->cart[] = $productaName;
     }
-   
+
     public function totalToPay(){
-        foreach($this->cart as $item)
-            $this->cartTotal += $item->price;
-        return $cartTotal;
+    
+        if($this->discount === 0){
+            foreach($this->cart as $item)
+                $this->cartTotal += $item->price;
+            return $this->cartTotal;
+        } else {
+            foreach($this->cart as $item)
+                $this->cartTotal += $item->price;
+            return $this->cartTotal - (($this->cartTotal /100)*$this->discount);
+        }
     }
 }
 
 class PremiumUser extends User{
-    protected $discount = 49;
+    protected $discount = 50;
 }
